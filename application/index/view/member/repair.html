@@ -1,0 +1,33 @@
+{extend name="public:base"}
+
+{block name="content"}
+
+<div class="container">
+    <form action="{:url('member/repair')}" method="post">
+        <div class="form-group">
+            <label>您的姓名(必填):</label>
+            <input type="text" class="form-control" name="name"/>
+        </div>
+        <div class="form-group">
+            <label>你的地址(必填):</label>
+            <input type="text" class="form-control" name="address" />
+        </div>
+        <div class="form-group">
+            <label>联系电话(必填):</label>
+            <input type="text" class="form-control" name="telephone"/>
+        </div>
+        <div class="form-group">
+            <label>身份证号码(必填):</label>
+            <input type="text" class="form-control" name="card_num" />
+        </div>
+        <div class="form-group">
+            <label>维修内容(必填):</label>
+            <textarea class="form-control" rows="3" name="content"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary onlineBtn">确认提交</button>
+        </div>
+    </form>
+</div>
+
+{/block}

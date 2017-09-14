@@ -1,0 +1,22 @@
+{extend name="public:base"}
+
+{block name="content"}
+
+<div class="container-fluid">
+    {volist name="actives" id="active"}
+    <div class="row noticeList">
+        <a href="{:url('active/check',['id'=>$active.id])}">
+            <div class="col-xs-2">
+                <img class="noticeImg" src="{:get_file_path($active.logo)}" width="80px" />
+            </div>
+            <div class="col-xs-10">
+                <p class="title">{$active.title}</p><br/>
+                <p class="intro">活动店铺:{$active.shop_name}</p>
+                <p class="info"> <span class="pull-right">{:date('Y-m-s',$active.update_time)}</span> </p>
+            </div>
+        </a>
+    </div>
+    {/volist}
+</div>
+
+{/block}

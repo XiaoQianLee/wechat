@@ -1,0 +1,14 @@
+{extend name="public:base"}
+
+    {block name="content"}
+    <div class="container-fluid">
+        <div class="blank"></div>
+        <h3 class="noticeDetailTitle"><strong>{$active.title}</strong></h3>
+        <div class="noticeDetailInfo">活动店铺:{$active.shop_name}</div>
+        <div class="noticeDetailInfo">活动时间：{$active.start_time} 至 {$active.end_time}</div>
+        <div class="noticeDetailContent">
+            {$active.content}
+        </div>
+    </div>
+</div>
+{/block}
